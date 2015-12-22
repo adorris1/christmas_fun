@@ -1,8 +1,8 @@
-package connections;
+package src.connections;
 
 import java.sql.ResultSet;
 import java.text.*;
-import connections.connect;
+
 
 import java.util.ArrayList;
 
@@ -29,24 +29,8 @@ public class publication {
 		dayNum = dNum;
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-	public publication(connect con, int ID){
-
-		cn = con;
-=======
-	public publication(int ID){
-<<<<<<< HEAD
-		ResultSet r = cn.searchPublication(ID, "", "");
-=======
->>>>>>> master
-		ResultSet r = cn.searchPublication(ID, "");
-
-=======
 	public publication(int ID){
 		ResultSet r = cn.searchPublication(ID, "", "");
->>>>>>> Nathan_Branch
->>>>>>> a6dcfcfcbca8a4c07535ca5f7ef92de01fa8f224
 		try{
 			while(r.next()){
 				PID = r.getInt("PublicationID");
@@ -114,19 +98,13 @@ public class publication {
 	}
 
 	 public double getPrice(){
-<<<<<<< HEAD
 		 return price;
 	 }
 
-=======
-<<<<<<< HEAD
-	        return price;
-	    }
 	    
 	    public String getBillTitle(){
 	        return title + " - " +frequency;
 	    }
-<<<<<<< HEAD
 	  public int getPID(){
 		  return PID;
 	  }
@@ -134,21 +112,10 @@ public class publication {
 		  return title;
 	  }
 	
-=======
 
 	public void close(){
 		cn.disconnect();
 	}
->>>>>>> master
-=======
-		 return price;
-	 }
-
->>>>>>> a6dcfcfcbca8a4c07535ca5f7ef92de01fa8f224
-	 public String getBillTitle(){
-		 return title + " - " +frequency;
-	 }
-
 
 	 public static ArrayList<String> getSearchPublications(String name, String genre){
 		 connect c = new connect();
@@ -174,56 +141,4 @@ public class publication {
 		 }
 	 }
 
-	 public void close(){
-		 cn.disconnect();
-	 }
-<<<<<<< HEAD
-=======
->>>>>>> Nathan_Branch
->>>>>>> a6dcfcfcbca8a4c07535ca5f7ef92de01fa8f224
 }
-//public static String getNextIssueDate(String issuedDate, String freq){
-//
-//freq= freq.toLowerCase();
-////System.out.println("freq: " + freq);
-//Date today = new Date();
-//Date nextDate = DateTime.strToDate(issuedDate);
-// if(freq.equals("daily")){
-//	 while(nextDate.before(today)){
-//		 String str = DateTime.dateToStr(nextDate);
-//		 String todayStr = DateTime.dateToStr(today);
-//		 if(str.equals(todayStr)){
-//			break;
-//		}
-//		 else{
-//		    nextDate = DateTime.addOneDay(nextDate);
-//			}
-//		}
-//	}
-// else if(freq.equals("weekly")){
-//	 while(nextDate.before(today)){
-//		 String str = DateTime.dateToStr(nextDate);
-//		 String todayStr = DateTime.dateToStr(today);
-//		if(str.equals(todayStr)){
-//		    break;
-//		}else{
-//			 nextDate = DateTime.addOneWeek(nextDate);
-//			   // System.out.println("next date: "+ nextDate + " today : " + today);
-//		}
-//	}
-//}
-// else if(freq.equals("monthly")){
-//	 while(nextDate.before(today)){
-//		 String str = DateTime.dateToStr(nextDate);
-//		 String todayStr = DateTime.dateToStr(today);
-//		if(str.equals(todayStr)){
-//		    break;
-//		}else{
-//		nextDate = DateTime.addOneMonth(nextDate);
-//		}
-//	 }
-// }
-// String next =  DateTime.dateToStr(nextDate);
-//// setNextIssueDate(next);
-// return next;
-//}

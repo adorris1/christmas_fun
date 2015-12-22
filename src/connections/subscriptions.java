@@ -1,4 +1,4 @@
-package connections;
+package src.connections;
 
 import java.text.*;
 import java.util.Date;

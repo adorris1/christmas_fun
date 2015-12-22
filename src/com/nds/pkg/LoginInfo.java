@@ -1,4 +1,4 @@
-package com.nds.pkg;
+package src.com.nds.pkg;
 
 public class LoginInfo {
 	private String username;

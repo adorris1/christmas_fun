@@ -1,4 +1,4 @@
-package connections;
+package src.connections;
 import java.sql.*;
 import java.util.Date;
 
@@ -20,11 +20,8 @@ public class connect{
 	public connect(){
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-<<<<<<< HEAD
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3308/saturdays_db", "root", "12345");
-=======
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/NewDB", "root", "");
->>>>>>> Nathan_Branch
+
 			stmt = con.createStatement();
 		}catch(Exception e){
 			e.printStackTrace();
@@ -363,21 +360,9 @@ public class connect{
 	 */
 	public ResultSet getDailyCustomerInfo(int wk, int mn){
 		try{
-<<<<<<< HEAD
-			return stmt.executeQuery("select * from customerpublications where "
-					+ "(DeliveryDays = " + wk + " AND Frequency = \"weekly\") OR "
-							+ "(DeliveryDays = " + mn + " AND Frequency = \"monthly\") "
-									+ "OR Frequency = \"daily\" order by Latitude, Longitude");
-=======
-<<<<<<< HEAD
+
 			return stmt.executeQuery("select * from customerpublications where (DeliveryDays = " + wk + " AND Frequency = \"weekly\") OR (DeliveryDays = " + mn + " AND Frequency = \"monthly\") OR Frequency = \"daily\" order by Latitude, Longitude, CustomerID");
-=======
-			return stmt.executeQuery("select * from customerpublications where "
-					+ "(DeliveryDays = " + wk + " AND Frequency = \"weekly\") OR "
-							+ "(DeliveryDays = " + mn + " AND Frequency = \"monthly\") "
-									+ "OR Frequency = \"daily\" order by CID");
->>>>>>> Nathan_Branch
->>>>>>> a6dcfcfcbca8a4c07535ca5f7ef92de01fa8f224
+
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -445,10 +430,7 @@ public class connect{
 	public boolean modCustomerInfo(int CID, String type, Date to){
 		try{
 			stmt.executeUpdate("update customers set " + type + " = \"" + to + "\" where CustomerID = " + CID);
-<<<<<<< HEAD
-=======
-			System.out.println("CID: " + CID + ", type: " + type );
->>>>>>> a6dcfcfcbca8a4c07535ca5f7ef92de01fa8f224
+
 			return true;
 		}
 		catch(Exception e){
@@ -540,28 +522,16 @@ public class connect{
 	public ResultSet searchPublication(int PID, String t, String genre){
 		ResultSet rs;
 		try{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-			if(PID!=0){
-				rs = stmt.executeQuery("select * from publications where PublicationID = " + PID);
-			}
-			else{
-				rs = stmt.executeQuery("select * from publications where PublicationName = \"" + t + "\"");
-=======
->>>>>>> a6dcfcfcbca8a4c07535ca5f7ef92de01fa8f224
+
 			if(PID != 0){
-				rs = stmt2.executeQuery("select * from publications where PublicationID = " + PID);
+				rs = stmt.executeQuery("select * from publications where PublicationID = " + PID);
 			}else if(t.length() != 0 && genre.length() == 0){
-				rs = stmt2.executeQuery("select * from publications where PublicationName like \'%" + t + "%\'");
+				rs = stmt.executeQuery("select * from publications where PublicationName like \'%" + t + "%\'");
 			}else if(genre.length() != 0 && t.length() == 0){
-				rs = stmt2.executeQuery("select * from publications where genre like \'%" + genre + "%\'");
+				rs = stmt.executeQuery("select * from publications where genre like \'%" + genre + "%\'");
 			}else {
-				rs = stmt2.executeQuery("select * from publications");
-<<<<<<< HEAD
-=======
->>>>>>> Nathan_Branch
->>>>>>> a6dcfcfcbca8a4c07535ca5f7ef92de01fa8f224
+				rs = stmt.executeQuery("select * from publications");
+
 			}
 			return rs;
 		}
