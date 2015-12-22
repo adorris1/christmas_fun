@@ -1,11 +1,11 @@
-package tests;
+package src.tests;
 
 import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import java.sql.*;
-import connections.*;
+import src.connections.*;
 import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
 

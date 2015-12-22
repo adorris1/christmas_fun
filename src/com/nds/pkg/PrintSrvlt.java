@@ -1,4 +1,4 @@
-package com.nds.pkg;
+package src.com.nds.pkg;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import connections.print;
+import src.connections.print;
 
 /**
  * Servlet implementation class RoutPrintSrvlt

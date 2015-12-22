@@ -1,4 +1,4 @@
-package connections;
+package src.connections;
 
 
 import java.sql.*;
@@ -12,19 +12,8 @@ import java.util.GregorianCalendar;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.text.SimpleDateFormat;
-
-
-public class Main {
-
-
-	public static void main(String[] args) {
-		customer c = new customer(39);
-		System.out.println(c.getFirstName());
-		c.modFirstName("Org");
-		System.out.println(c.getFirstName());
-		c.close();
-=======
 import java.sql.ResultSet;
+
 
 //
 //

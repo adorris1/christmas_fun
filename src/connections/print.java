@@ -1,4 +1,4 @@
-package connections;
+package src.connections;
 import java.io.*;
 import java.sql.ResultSet;
 import java.util.ArrayList;

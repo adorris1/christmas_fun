@@ -5,4 +5,4 @@
  * @author Lee
  *
  */
-package com.nds.pkg;
+package src.com.nds.pkg;

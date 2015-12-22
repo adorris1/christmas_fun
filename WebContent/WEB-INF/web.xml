@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>WebApp-01</display-name> 
   <welcome-file-list>
@@ -79,9 +78,7 @@
   <servlet-mapping>
     <servlet-name>PrintFullSrvlt</servlet-name>
     <url-pattern>/PrintFullSrvlt</url-pattern>
-  </servlet-mapping>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
+  </servlet-mapping>sion="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>WebApp-01</display-name>
   <welcome-file-list>
@@ -161,6 +158,4 @@
   <servlet-mapping>
     <servlet-name>PrintFullSrvlt</servlet-name>
     <url-pattern>/PrintFullSrvlt</url-pattern>
-  </servlet-mapping>
->>>>>>> Nathan_Branch
-</web-app>
+  </ser

@@ -1,4 +1,4 @@
-package com.nds.pkg;
+package src.com.nds.pkg;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 
-import connections.publication;
+import src.connections.publication;
 
 /**
  * Servlet implementation class CustEditSrvlt

@@ -1,11 +1,11 @@
-package tests;
+package src.tests;
 
 import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import java.sql.*;
-import connections.*;
+import src.connections.*;
 
 
 public class subscriptionsTest {
@@ -34,7 +34,7 @@ public class subscriptionsTest {
     	 			e.printStackTrace();
     			}
 	
-   	       	ResultSet rs = con.searchPublication(0, "Runner Magazine");
+   	       	ResultSet rs = con.searchPublication(0,"", "Runner Magazine");
 
    			try{
     			while(rs.next()){
@@ -44,7 +44,7 @@ public class subscriptionsTest {
     			}catch(Exception e){
     	 			e.printStackTrace();
     			}
-   			subscriptions newSub = new subscriptions(con, testCustID, testPubID);
+   			subscriptions newSub = new subscriptions( testCustID, testPubID);
 	}
 	@Test
 	public void addSubcriptionTest(){

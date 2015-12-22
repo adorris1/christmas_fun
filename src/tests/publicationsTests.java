@@ -1,11 +1,11 @@
-package tests;
+package src.tests;
 
 import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import java.sql.*;
-import connections.*;
+import src.connections.*;
 
 public class publicationsTests {
 	public static int testPubID;
@@ -15,13 +15,13 @@ public class publicationsTests {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		testPub = new publication(con, "Runner Magazine","Sports", 9.80, "Monthly", 5);
+		testPub = new publication( "Runner Magazine","Sports", 9.80, "Monthly", 5);
 		testPubID = testPub.getPID();
     }
 	@Test
     public void addPubTest(){
 
-		publication pub = new publication(con, testPubID);
+		publication pub = new publication( testPubID);
 		assertEquals("Runner Magazine",pub.getTitle());
 	}
     
@@ -29,7 +29,7 @@ public class publicationsTests {
 	public void modPublicationPriceTest(){
 		final double DELTA = 1e-15;
 
-		publication pub = new publication(con, testPubID);
+		publication pub = new publication( testPubID);
 		pub.modPrice(6.50);
 		double newPrice = pub.getPrice();
 		assertEquals(newPrice , 6.50, DELTA);

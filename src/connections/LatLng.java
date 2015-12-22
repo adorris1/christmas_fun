@@ -1,4 +1,4 @@
-package connections;
+package src.connections;
 import java.sql.ResultSet;
 
 public class LatLng {
